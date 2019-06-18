@@ -14,8 +14,17 @@ source /etc/locale.conf
 sudo timedatectl set-timezone Asia/Tokyo
 
 # ファイアウォールをOFF
-sudo systemctl stop firewalld.service
-sudo systemctl disable firewalld.service
+# sudo systemctl stop firewalld.service
+# sudo systemctl disable firewalld.service
+
+# ファイアウォールをON
+sudo systemctl restart firewalld.service
+sudo systemctl enable firewalld.service
+
+# httpとssh通信を許可
+sudo firewall-cmd --zone=public --add-service=http --permanent
+sudo firewall-cmd --zone=public --add-service=ssh --permanent
+sudo firewall-cmd --reload
 
 # マニュアルのインストール
 sudo yum -y install man
