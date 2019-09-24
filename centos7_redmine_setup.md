@@ -100,7 +100,7 @@ ruby -v # バージョンが表示される
 
 ***
 ## gemの管理をするbundlerをインストール  
-__※後続処理でエラーとなったため回避策としてバージョンを指定している__
+* ※後続処理でエラーとなったため回避策としてバージョンを指定している
 ```bash
 gem install -v 1.5.0 bundler
 ```
@@ -166,7 +166,7 @@ production:
 
 ***
 ## 設定ファイルcomfiguration.ymlの作成  
-__メール通知用のサーバやファイルのアップロード先をこのファイル内で設定できるが今回は使用しないのでデフォルのまま__
+* メール通知用のサーバやファイルのアップロード先をこのファイル内で設定できるが今回は使用しないのでデフォルのまま
 ```bash
 cp configuration.yml.example configuration.yml
 ```
@@ -192,8 +192,8 @@ RAILS_ENV=production REDMINE_LANG=ja bundle exec rake redmine:load_default_data
 
 ***
 ## Passengerのインストール  
-* Phusion Passengerをインストール  
-__Apache上でRedmineなどのRailsアプリを動かすために使われる__
+* Phusion Passengerをインストール
+* Apache上でRedmineなどのRailsアプリを動かすために使われる
 ```bash
 gem install passenger
 ```
@@ -215,11 +215,10 @@ LoadModule passenger_module /usr/local/rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/
 * ApacheにRedmine用設定ファイルを追加
 ```bash
 vi /etc/httpd/conf.d/redmine.conf
-
+# --------------------------------------------------
 <Directory "/var/lib/redmine/public">
   Require all granted
 </Directory>
-# --------------------------------------------------
 # 先ほどのコマンドの結果を入力する
 LoadModule passenger_module /usr/local/rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/passenger-6.0.2/buildout/apache2/mod_passenger.so
 <IfModule mod_passenger.c>
