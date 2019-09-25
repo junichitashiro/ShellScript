@@ -88,24 +88,14 @@ TCPポート：22
 ***
 ## Vagrantコマンドの一部抜粋  
 ```bash
-# Boxの起動
-vagrant up
-# Boxのシャットダウン
-vagrant halt
-# Boxの一時停止
-vagrant suspend
-# 一時停止したBoxの再開
-vagrant resume
-# Boxの再起動
-vagrant reload
-# 接続用の設定情報を表示
-vagrant ssh-config
-# Boxの状態を表示
-vagrant status
-# Boxの破棄
-vagrant destroy
-# Boxの一覧を表示
-vagrant box list
-# Boxの削除
-vagrant box remove [Box名]
+vagrant up                  # Boxの起動
+vagrant halt                # Boxのシャットダウン
+vagrant suspend             # Boxの一時停止
+vagrant resume              # 一時停止したBoxの再開
+vagrant reload              # Boxの再起動
+vagrant ssh-config          # 接続用の設定情報を表示
+vagrant status              # Boxの状態を表示
+vagrant destroy             # Boxの破棄
+vagrant box list            # Boxの一覧を表示
+vagrant box remove [Box名]  # Boxの削除
 ```
