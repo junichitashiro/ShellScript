@@ -1,4 +1,4 @@
-# macOSのVagrantのセットアップ  
+# MacのVagrantセットアップ手順
 * 事前にHomebrewをインストールしておく
 
 ***
