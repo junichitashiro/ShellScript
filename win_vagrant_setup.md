@@ -41,7 +41,7 @@ vagrant box add local-centos7 [コピーしたBoxのURL]
 vagrant init [Box名]  
 コマンド実行後Box名のディレクトリにVagrantfileが作成される
 ```bat
-agrant init local-centos7
+vagrant init local-centos7
 ```
 
 ***
