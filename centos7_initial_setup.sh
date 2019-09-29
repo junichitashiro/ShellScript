@@ -37,6 +37,3 @@ sudo systemctl enable httpd.service
 
 # SHELLに再ログイン
 exec $SHELL -l
-
-# システムのアップデート
-sudo yum -y update
