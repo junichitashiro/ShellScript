@@ -3,9 +3,6 @@
 # 実行ユーザ：vagrant
 # --------------------------------------------------
 
-# システムのアップデート
-sudo yum -y update
-
 # ホスト名の変更
 sudo sh -c "echo 'local-centos7' > /etc/hostname"
 
@@ -38,4 +35,8 @@ sudo yum -y install httpd
 sudo systemctl start httpd.service
 sudo systemctl enable httpd.service
 
+# SHELLに再ログイン
 exec $SHELL -l
+
+# システムのアップデート
+sudo yum -y update
