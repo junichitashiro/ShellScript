@@ -1,3 +1,4 @@
+#/bin/bash
 # --------------------------------------------------
 # CentOS7(Vagrant)の初期設定
 # 実行ユーザ：vagrant
@@ -12,10 +13,6 @@ source /etc/locale.conf
 
 # タイムゾーンを日本に設定する
 sudo timedatectl set-timezone Asia/Tokyo
-
-# ファイアウォールをOFF
-# sudo systemctl stop firewalld.service
-# sudo systemctl disable firewalld.service
 
 # ファイアウォールをON
 sudo systemctl restart firewalld.service
