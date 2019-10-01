@@ -14,7 +14,7 @@ source /etc/locale.conf
 # タイムゾーンを日本に設定する
 sudo timedatectl set-timezone Asia/Tokyo
 
-# ファイアウォールをON
+# ファイアウォールを起動
 sudo systemctl restart firewalld.service
 sudo systemctl enable firewalld.service
 
