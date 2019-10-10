@@ -6,6 +6,9 @@
 ・ログファイル名はバックアップの成否が分かるように命名する
 COMMENTOUT
 
+# rootのパスワードを設定
+RPW="***"
+
 # バックアップファイルの設定
 BACKUP_DIR="/home/script/data/mysql_backup"
 FILENAME=`date +"%Y%m%d%H%M%S"`
@@ -16,11 +19,15 @@ TMP_FILE=${LOG_DIR}/${FILENAME}_tmp.log
 LOG_FILE=${LOG_DIR}/${FILENAME}.log
 ERR_LOG_FILE=${LOG_DIR}/${FILENAME}_error.log
 
+# ディレクトリの作成
+mkdir -p ${BACKUP_DIR}
+mkdir -p ${LOG_DIR}
+
 echo "バックアップ開始:"`date +%H:%M:%S` > ${TMP_FILE}
 echo "" >> ${TMP_FILE}
 
 # バックアップ処理
-mysqldump --opt --password=root1 workbook > ${BACKUP_DIR}/${FILENAME}.sql
+mysqldump --opt --password=${RPW} workbook > ${BACKUP_DIR}/${FILENAME}.sql
 
 if [ $? = 0 ]; then
     echo "バックアップ正常終了:"`date +%H:%M:%S` >> ${TMP_FILE}
