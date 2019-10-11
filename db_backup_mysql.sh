@@ -7,13 +7,13 @@
 COMMENTOUT
 
 # rootのパスワードを設定
-RPW="***"
+PW="***"
 
-# バックアップファイルの設定
+# バックアップファイルのパス設定
 BACKUP_DIR="/home/script/data/mysql_backup"
 FILENAME=`date +"%Y%m%d%H%M%S"`
 
-# ログファイルの設定
+# ログファイルのパス設定
 LOG_DIR="/home/script/log/mysql_backup"
 TMP_FILE=${LOG_DIR}/${FILENAME}_tmp.log
 LOG_FILE=${LOG_DIR}/${FILENAME}.log
@@ -27,7 +27,7 @@ echo "バックアップ開始:"`date +%H:%M:%S` > ${TMP_FILE}
 echo "" >> ${TMP_FILE}
 
 # バックアップ処理
-mysqldump --opt --password=${RPW} workbook > ${BACKUP_DIR}/${FILENAME}.sql
+mysqldump --opt --password=${PW} workbook > ${BACKUP_DIR}/${FILENAME}.sql
 
 if [ $? = 0 ]; then
     echo "バックアップ正常終了:"`date +%H:%M:%S` >> ${TMP_FILE}
