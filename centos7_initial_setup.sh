@@ -36,7 +36,6 @@ sudo sed -i 's/server 3.centos.pool.ntp.org iburst/# server 3.centos.pool.ntp.or
 sudo sed -i '/# server 0.centos.pool.ntp.org/i server -4 ntp.nict.jp iburst' /etc/ntp.conf
 sudo sed -i '/# server 0.centos.pool.ntp.org/i server -4 ntp.nict.jp iburst' /etc/ntp.conf
 sudo sed -i '/# server 0.centos.pool.ntp.org/i server -4 ntp.nict.jp iburst' /etc/ntp.conf
-sudo sed -i '/# server 0.centos.pool.ntp.org/i server -4 ntp.nict.jp iburst' /etc/ntp.conf
 
 sudo systemctl start ntpd.service
 sudo systemctl enable ntpd.service
