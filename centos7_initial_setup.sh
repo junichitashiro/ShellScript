@@ -5,7 +5,7 @@
 # --------------------------------------------------
 
 # ホスト名の変更
-sudo sh -c "echo 'local-centos7' > /etc/hostname"
+sudo sh -c "echo 'dev-centos7' > /etc/hostname"
 
 # システムの表記を日本語にする
 sudo localectl set-locale LANG=ja_JP.UTF-8
