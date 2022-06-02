@@ -1,10 +1,4 @@
 #/bin/bash
-<< COMMENTOUT
-・mysqlcheckコマンドをOSから実行する
-・最適化の対象は workbook の全テーブルとする
-・最適化の実行前後でテーブルのステータスをログに出力する
-・作業の経過が分かるように開始時や終了時にログを出力する
-COMMENTOUT
 
 # rootのパスワードを設定
 PW="***"
@@ -14,7 +8,6 @@ FILENAME=`date +"%Y%m%d%H%M%S"`
 LOG_DIR="/home/script/log/mysql_mainte"
 LOG_FILE=${LOG_DIR}/${FILENAME}.log
 
-# ディレクトリの作成
 mkdir -p ${LOG_DIR}
 
 echo "メンテナンス開始:"`date +%H:%M:%S` > ${LOG_FILE}
