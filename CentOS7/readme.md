@@ -1,4 +1,4 @@
-# CentOS7(Vagrant)の初期設定スクリプト
+# CentOS7の初期設定スクリプト
 
 ## 実行環境
 * vagrant上に構築したCentOS7
